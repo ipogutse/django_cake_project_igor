@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en">
+    <head><meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Student Info</title
+    </head>
+    <body bgcolor="cyan"> 
+        <form action='studentinfo', method='get'>
+            {% csrf_token %}
+            <li> welcome to {{ course_name }} course</li>
+            <li> Our data {{ d1 }} </li>
+            <li> Our data2 {{ d2 }} </li>
+            <li> Our data3 {{ d3 }} </li>
+            <li> Our data4 {{ d4 }} </li>
+            <li> Our data5 {{ d5 }} </li>
+            <li> Our data6 {{ d6 }} </li>
+        </form>
+
+        <div>
+            {% for message in messages%}
+            <h2> {{message}}</h2>
+            {% endfor%}
+        </div>
+    
+    </body>
+    
+    </html>
